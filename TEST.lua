@@ -1,6 +1,6 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-    Name = "Qxior Dupe",
+    Name = "Kennz Dupe",
     Icon = 0,
     LoadingTitle = "Dupe",
     LoadingSubtitle = "by Qxior",
