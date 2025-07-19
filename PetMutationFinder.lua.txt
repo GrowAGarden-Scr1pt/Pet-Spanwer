@@ -1,5 +1,4 @@
-
--- Pet Mutation Finder with Styled ESP + Credit Footer
+-- Pet Mutation Finder with Styled ESP + Credit Kennz
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local PlayerGui = player:WaitForChild("PlayerGui")
