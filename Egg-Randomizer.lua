@@ -145,12 +145,12 @@ end
 
 local function countdownAndRandomize(button)
     for i = 10, 1, -1 do
-        button.Text = "ðŸŽ² Randomize in: " .. i
+        button.Text = "Randomize in: " .. i
         wait(1)
     end
     flashEffect(button)
     randomizeNearbyEggs()
-    button.Text = "ðŸŽ² Randomize Pets"
+    button.Text = "Randomize Pets"
 end
 
 local screenGui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
@@ -167,7 +167,7 @@ Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 10)
 local title = Instance.new("TextLabel", frame)
 title.Size = UDim2.new(1, 0, 0, 30)
 title.BackgroundTransparency = 1
-title.Text = "ðŸ¾ Pet Randomizer âœ¨"
+title.Text = "Pet Randomizer¨"
 title.Font = Enum.Font.FredokaOne
 title.TextSize = 22
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -213,7 +213,7 @@ toggleBtn.Font = Enum.Font.FredokaOne
 toggleBtn.TextColor3 = Color3.new(1, 1, 1)
 toggleBtn.MouseButton1Click:Connect(function()
     espEnabled = not espEnabled
-    toggleBtn.Text = espEnabled and "ðŸ‘ï¸ ESP: ON" or "ðŸ‘ï¸ ESP: OFF"
+    toggleBtn.Text = espEnabled and " ESP: ON" or " ESP: OFF"
     for _, egg in pairs(getPlayerGardenEggs(60)) do
         if espEnabled then
             applyEggESP(egg, truePetMap[egg])
@@ -252,7 +252,7 @@ autoBtn.MouseButton1Click:Connect(function()
             for _, petName in pairs(truePetMap) do
                 if bestPets[petName] then
                     autoRunning = false
-                    autoBtn.Text = "ðŸ” Auto Randomize: OFF"
+                    autoBtn.Text = "” Auto Randomize: OFF"
                     return
                 end
             end
@@ -339,8 +339,8 @@ local function createButton(text, yPos, color)
 	return btn
 end
 
-local reroll = createButton("ðŸ”ƒ Reroll Mutation", 45, Color3.fromRGB(140, 200, 255))
-local toggle = createButton("ðŸ” Toggle Mutation Esp", 90, Color3.fromRGB(180, 255, 180))
+local reroll = createButton("Reroll Mutation", 45, Color3.fromRGB(140, 200, 255))
+local toggle = createButton("Toggle Mutation Esp", 90, Color3.fromRGB(180, 255, 180))
 
 local credit = Instance.new("TextLabel", frame)
 credit.Size = UDim2.new(1, 0, 0, 20)
@@ -392,7 +392,7 @@ RunService.RenderStepped:Connect(function()
 end)
 
 local function animateMutationReroll()
-	reroll.Text = "â³ Rerolling..."
+	reroll.Text = "Rerolling..."
 	local duration = 2
 	local interval = 0.1
 	for i = 1, math.floor(duration / interval) do
@@ -416,7 +416,7 @@ local loadAgeBtn = Instance.new("TextButton", frame)
 loadAgeBtn.Size = UDim2.new(1, -20, 0, 30)
 loadAgeBtn.Position = UDim2.new(0, 10, 1, -35)
 loadAgeBtn.BackgroundColor3 = Color3.fromRGB(100, 90, 200)
-loadAgeBtn.Text = "ðŸ•’ Load Pet Age 50 Script"
+loadAgeBtn.Text = "Load Pet Age 50 Script"
 loadAgeBtn.TextSize = 16
 loadAgeBtn.Font = Enum.Font.FredokaOne
 loadAgeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -429,7 +429,7 @@ local credit = Instance.new("TextLabel", frame)
 credit.Size = UDim2.new(1, 0, 0, 20)
 credit.Position = UDim2.new(0, 0, 0, 22)
 credit.BackgroundTransparency = 1
-credit.Text = "Made by - Jaquman013"
+credit.Text = "Made by - @kennz_hub"
 credit.Font = Enum.Font.FredokaOne
 credit.TextSize = 14
 credit.TextColor3 = Color3.fromRGB(200, 200, 200)
